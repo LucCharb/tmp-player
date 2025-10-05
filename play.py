@@ -250,34 +250,6 @@ def list_songs(media_result):
     display_menu("after")
     input_song(media_result)
 
-# def list_shows(media_result):
-#     season=None
-#     count=0
-#     show_tup=[]
-#     title = ""
-#     for file in sorted(media_result):
-#         newtitle=file[1].split('/')[5]
-#         if title != newtitle:
-#             title = newtitle
-#             print('')
-#             print('Show: ' + title)
-#         try:
-#             tvs=file[2]
-#             res=test(tvs)
-#             if res["season"] != season:
-#                 # print('')
-#                 print('Season ' + res["season"])
-#                 print("-----------------------------------")
-#                 season = res["season"]
-#             ct=str(count)
-#             print(ct + ' - ', end="")
-#             print(tvs)
-#             show_tup.append((count, file[1]))
-#             count += 1
-#         except ValueError as e:
-#             print(e)
-#     return show_tup
-
 def list_shows(media_result):
     """List TV shows from media_result, printing title and season when both are new, season only when it changes."""
     show_tup = []
